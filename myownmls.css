@@ -1,0 +1,410 @@
+
+/*#######################################################CUSTOM CSS CODE#######################STARTS####################################*/
+    .pl_listing-search {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .pl_listings .card-grid.two-col .pl_listing, .pl_listings .card-grid.three-col .pl_listing {
+        display: inline-block;
+        min-height: 1px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .pl_listings .card-grid.three-col .pl_listing {
+        float: left;
+        direction: ltr;
+        width: 33.3333333333%;
+    }
+    .pl_listing.pl_listing.pl_listing {
+        margin-bottom: 10px;
+    }
+    .pl_listing:not(:nth-child(3n+3)) {
+        padding-right: 5px;
+    }
+    .pl_listings .card-grid .pl_listing-image {
+        box-shadow: 0 0 3px 0 #D3D9DC;
+        position: relative;
+        border-radius: 0;
+    }
+    figure.pl_listing-image {
+        margin: 0;
+    }
+    .pl_listing-image {
+        overflow: hidden;
+        height: 100%;
+        background-color: #111;
+    }
+    .pl_add_remove_lead_favorites {
+        /*position: absolute;*/
+        top: 0;
+        left: 0;
+        /*background: none;*/
+        background-color: #999;
+        z-index: 1;
+    }
+    .pl_add_remove_lead_favorites {
+        position: relative;
+    }
+    .pl_add_remove_lead_favorites a.pl_add_favorite {
+        color: #fff;
+    }
+    .pl_add_remove_lead_favorites a {
+        margin: 15px;
+    }
+    .pl_add_remove_lead_favorites>a {
+        font-size: 20px;
+    }
+    a {
+        text-decoration: none;
+    }
+    
+    /*favorite top left icon, should be removed*/
+    .pl_listing .pl_add_remove_lead_favorites a.pl_add_favorite:before {
+        content: "\f006";
+    }
+.pl_listings .card-grid .pl_listing-image .listing-image {
+    border-radius: 0;
+}
+.listing-image {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.pl_listing .listing-image:before {
+    content: "";
+    background-color: rgba(0,0,0,0.35);
+    top: 0;
+    left: 0;
+    /*position: absolute;*/
+    width: 100%;
+    height: 100%;
+}
+[role='main'] article:before {
+    content: " ";
+    display: table;
+}
+.pl_listing-details-container-wrapper {
+    /*position: absolute;*/
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1;
+}
+.pl_listing .pl_listing-details-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*max-height: 54px;*/
+    transition: all .5s;
+}
+.pl_listing-details-wrapper {
+    background-color: rgba(17,17,17,0.8);
+    background-color: #002;
+}
+.pl_listing .pl_listing-name-address {
+    line-height: 17px;
+    padding-top: 18px;
+}
+.pl_listing-details-container-wrapper span { 
+    color: #fff;
+    font-size: 0.78rem;
+    font-family: "Montserrat",sans-serif;
+}
+.pl_listing .pl_listing-beds-baths-footage {
+    position: relative;
+    text-align: right;
+    max-width: calc( 50% - 25px );
+    padding-right: 25px;
+    line-height: 1rem;
+    align-self: flex-start;
+    padding-left: 0px;
+    z-index: 1;
+    padding-top: 1.2em;
+}
+.pl_listing-beds-baths-footage span:not(:first-of-type) {
+    margin-left: 7px;
+}
+.pl_listing .pl_listing-mlsId, .pl_listing .pl_listing-name-address {
+    position: relative;
+    /*top: 54px;*/
+    /*opacity: 0;*/
+    transition: all .25s ease .25s, opacity .25s ease .15s;
+}
+.pl_listing-mlsId {
+    padding-top: 6px;
+    width: 100%;
+}
+.pl_listing-price, .pl_listing-name-address, .pl_listing-mlsId {
+    padding-left: 25px;
+}
+.pl_listing .pl_listing-price {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pl_listing-price, .pl_listing-name-address, .pl_listing-mlsId {
+    padding-left: 25px;
+}
+.pl_listing-price {
+    line-height: 52px;
+    margin-right: auto;
+}  
+.pl_listing-price span {
+    font-family: Georgia,serif;
+    font-size: 1.11rem;
+    color: #fff;
+}
+
+.pl_listing-link {
+    width: auto;
+    line-height: 54px;
+    margin-left: auto;
+    margin-right: 25px;
+    font-size: 0.67rem;
+    font-style: italic;
+    color: #fff;
+    position: relative;
+}
+.pl_listing-link .sliding-arrow {
+    margin-left: 5px;
+}
+
+.sliding-arrow {
+    width: 15px;
+    height: 10px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 10px;
+    display: inline-block;
+    transition: width .25s;
+}
+
+.sliding-arrow:before {
+    height: 2px;
+    background: #fff;
+    width: 10px;
+}
+
+.sliding-arrow:before, .sliding-arrow:after {
+    content: '';
+    /*position: absolute;*/
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    transition: all .25s;
+}
+
+.sliding-arrow:after {
+    width: 0;
+    height: 0;
+    border: 4px solid #fff;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    left: 10px;
+}
+.sliding-arrow:before, .sliding-arrow:after {
+    content: '';
+    /*position: absolute;*/
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    transition: all .25s;
+}
+[role='main'] article:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+
+
+
+
+.pl_listings .pl_pagination {
+    padding: 50px 0 0;
+}
+
+.pl_pagination {
+    clear: both;
+    text-align: center;
+}
+
+#main_content ul, #main_content ol {
+    list-style: disc;
+}
+.pl_pagination ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#main_content ul li, #main_content ol li {
+    list-style-position: inside;
+}
+.pl_listings .btn-prev-page {
+    padding-left: 0;
+}
+.pl_listings li {
+    padding: 0;
+}
+.pl_pagination li {
+    display: inline-block;
+    padding: 1em;
+}
+.pl_listings li a {
+    position: relative;
+    font-family: "Montserrat",sans-serif;
+    font-size: 0.89rem;
+    color: #111;
+    font-weight: 700;
+    min-width: 24px;
+    display: inline-block;
+    margin: 0 8px;
+    transition: all .25s;
+}
+
+.pl_pagination a {
+    cursor: pointer;
+}
+.pl_listings .btn-prev-page.disabled a:before, .pl_listings .btn-next-page.disabled a:before {
+    color: #999;
+}
+.pl_listings .btn-prev-page a:before {
+    content: "\f104";
+}
+.pl_listings .btn-prev-page a:before, .pl_listings .btn-next-page a:before {
+    font-family: FontAwesome;
+    color: #111;
+    font-weight: 700;
+}
+#main_content ul li, #main_content ol li {
+    list-style-position: inside;
+}
+.pl_listings li {
+    padding: 0;
+}
+
+.pl_pagination li {
+    display: inline-block;
+    padding: 1em;
+}
+
+#main_content ul, #main_content ol {
+    list-style: disc;
+}
+.pl_pagination ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main_content ul li, #main_content ol li {
+    list-style-position: inside;
+}
+
+.pl_listings li {
+    padding: 0;
+}
+.pl_pagination li {
+    display: inline-block;
+    padding: 1em;
+}
+.pl_listings .active a {
+    color: #999;
+}
+.pl_pagination .active a {
+    color: inherit;
+}
+
+.pl_listings li a {
+    position: relative;
+    font-family: "Montserrat",sans-serif;
+    font-size: 0.89rem;
+    color: #111;
+    font-weight: 700;
+    min-width: 24px;
+    display: inline-block;
+    margin: 0 8px;
+    transition: all .25s;
+}
+.pl_pagination a {
+    cursor: pointer;
+}
+#main_content ul li, #main_content ol li {
+    list-style-position: inside;
+}
+.pl_listings .btn-next-page {
+    padding-right: 0;
+}
+.pl_listings li {
+    padding: 0;
+}
+
+.pl_pagination li {
+    display: inline-block;
+    padding: 1em;
+}
+.pl_listings li a {
+    position: relative;
+    font-family: "Montserrat",sans-serif;
+    font-size: 0.89rem;
+    color: #111;
+    font-weight: 700;
+    min-width: 24px;
+    display: inline-block;
+    margin: 0 8px;
+    transition: all .25s;
+}
+.pl_listings .btn-next-page a:before {
+    content: "\f105";
+}
+.pl_listings .btn-prev-page a:before, .pl_listings .btn-next-page a:before {
+    font-family: FontAwesome;
+    color: #111;
+    font-weight: 700;
+}
+.pl_listings li a:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 100%;
+    height: 2px;
+    background: #111;
+    transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.listings-container{width: 95%; margin: 0 auto;}
+.pl_listing.pl_listing--narCollection {
+    width: 33%;
+}
+
+.pl_listing-details-wrapper:hover .pl_listing-detail--hidden{
+    display: block;
+}
+
+/*#######################################################CUSTOM CSS CODE#######################ENDS######################################*/
