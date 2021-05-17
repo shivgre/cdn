@@ -29,7 +29,7 @@ $('<script>')
 $('<link>')
     .attr('type', 'text/css')
     .attr('rel', 'stylesheet')
-    .attr('href', 'http://localhost/squarespacerealbama-local/embed-listings/myownmls.css')
+    .attr('href', 'https://cdn.jsdelivr.net/gh/shivgre/cdn@master/myownmls.css')
     .appendTo('head');
 
 
@@ -934,27 +934,27 @@ function slipstreamGetListingsDetails()
                 else                    
                     $('.pl_property-listing-agent-name').append('Agent Name Unavailable');
                 
-//“xf_appliances”:[“Dishwasher”,“Electric Oven”,“Electric Range”,“Microwave”],
-//“xf_associationamenities”:[“Clubhouse”,“Fitness Center”,“Pool”],
-//“xf_associationfee”:214,
-//“xf_associationfeefrequency”:“Monthly”,
-//“xf_bathroomsfull”:1,
-//“xf_bathroomshalf”:0,
-//“xf_bathroomstotalinteger”:1,
-//“xf_bedroomstotal”:1,
-//“xf_constructionmaterials”:[“Brick Veneer”,“Other”,“Vinyl Siding”],
-//“xf_cooling”:[“Electric”],
-//“xf_daysonmarket”:1
-//“xf_fireplacefeatures”:[“None”],
-//“xf_heating”:[“Electric”]
-//“xf_interiorfeatures”:[“Ceiling Fan(s)“,”Granite Counters”,“Solid Surface Counters”],
-//“xf_laundryfeatures”:[“Laundry Closet”]
-//“xf_levels”:[“One”]
-//“xf_roof”:[“Composition”,“Shingle”],
-//“xf_roomstotal”:4,
-//“xf_sewer”:[“Connected”]
-//“xf_taxannualamount”:958
-//“xf_utilities”:[“Cable Available”,“Sewer Connected”]
+//“xf_appliances�?:[“Dishwasher�?,“Electric Oven�?,“Electric Range�?,“Microwave�?],
+//“xf_associationamenities�?:[“Clubhouse�?,“Fitness Center�?,“Pool�?],
+//“xf_associationfee�?:214,
+//“xf_associationfeefrequency�?:“Monthly�?,
+//“xf_bathroomsfull�?:1,
+//“xf_bathroomshalf�?:0,
+//“xf_bathroomstotalinteger�?:1,
+//“xf_bedroomstotal�?:1,
+//“xf_constructionmaterials�?:[“Brick Veneer�?,“Other�?,“Vinyl Siding�?],
+//“xf_cooling�?:[“Electric�?],
+//“xf_daysonmarket�?:1
+//“xf_fireplacefeatures�?:[“None�?],
+//“xf_heating�?:[“Electric�?]
+//“xf_interiorfeatures�?:[“Ceiling Fan(s)“,�?Granite Counters�?,“Solid Surface Counters�?],
+//“xf_laundryfeatures�?:[“Laundry Closet�?]
+//“xf_levels�?:[“One�?]
+//“xf_roof�?:[“Composition�?,“Shingle�?],
+//“xf_roomstotal�?:4,
+//“xf_sewer�?:[“Connected�?]
+//“xf_taxannualamount�?:958
+//“xf_utilities�?:[“Cable Available�?,“Sewer Connected�?]
                
             }
             
