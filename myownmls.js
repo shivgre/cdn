@@ -1,7 +1,3 @@
-
-//$('head').append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">');
-//window.location.pathname = '/';
-
 $('<link>')
     .attr('type', 'text/css')
     .attr('rel', 'stylesheet')
@@ -29,7 +25,7 @@ $('<script>')
 $('<link>')
     .attr('type', 'text/css')
     .attr('rel', 'stylesheet')
-    .attr('href', 'https://cdn.jsdelivr.net/gh/shivgre/cdn@master/myownmls.css')
+    .attr('href', 'http://localhost/squarespacerealbama-local/embed-listings/myownmls.css')
     .appendTo('head');
 
 
@@ -177,145 +173,6 @@ $('<script>')
         </div>\
     ')
     .appendTo('head');
-
-var scriptListingTemplate = '<script id="listingTemplate" type="text/x-jQuery-tmpl">\
-    <article class="pl_listing pl_listing--narCollection ">\
-        <figure class="pl_listing-image">\
-            <div class="pl_add_remove_lead_favorites" style="display: none;"><a href="#" class="pl_add_favorite fa fa-star"></a></div>\
-            <a href="/listing?mlsid=${mlsid}&address=${addressParam}" class="listing-image" itemprop="image" style="background-image: url(&quot;${listingImage}&quot;);"></a>\
-            {{if status == "Pending"}}\
-                <div class="pl_listing-pending">Pending</div>\
-            {{/if}}\
-            <div class="pl_listing-details-container-wrapper">\
-                <div class="pl_listing-details-wrapper">\
-                    <div class="pl_listing-detail-wrapper pl_listing-name-address pl_listing-detail--hidden">\
-                        <span class="pl_listing-details-item pl_listing-address">${listingAddress},</span>\
-                        <span class="pl_listing-details-item pl_listing-code">${listingStateCode}</span>\
-                    </div>\
-                    <div class="pl_listing-detail-wrapper pl_listing-beds-baths-footage">\
-                    \
-                    {{if listingType == "land"}}                        \
-                        <span class="pl_listing-details-item pl_listing-footage">${size}</span>    \
-                    {{else}}\
-                        <span class="pl_listing-details-item pl_listing-beds">${beds}</span>\
-                        <span class="pl_listing-details-item pl_listing-baths">${baths}</span>  \
-                        <span class="pl_listing-details-item pl_listing-footage">${size}</span>     \
-                    {{/if}}\
-                    \
-                    ${bedsBathsSizeHtml}\
-                    </div>\
-                    <span class="pl_listing-details-item pl_listing-mlsId pl_listing-detail--hidden">${mlsidTxt}</span>\
-                    <span class="pl_listing-details-item pl_listing-price" itemprop="price">\
-                        <span class="">${price}</span>\
-                    </span>\
-                    <a href="/listing?mlsid=${mlsid}&address=${addressParam}" class="pl_listing-details-item pl_listing-link pl_listing-detail--hidden arrow-container">\
-                        See details<span class="sliding-arrow"></span></a>\
-                </div>\
-            </div>\
-        </figure>\
-    </article>\
-<\/script>';
-
-var scriptSchoolsTemplate = '<script id="schoolsTemplate" type="text/x-jQuery-tmpl">\
-<div id="tab-${tabNumber}" class="tab-content ${currentTabClass}">\
-    <table class="slipstream-nvpairs">\
-        <tbody>\
-            {{if district}}\
-            <tr>\
-                <td>District:</td>\
-                <td>${district}</td>\
-            </tr>\
-            {{/if}}\
-            {{if gradeSpan}}\
-            <tr>\
-                <td>Grade Span:</td>\
-                <td>${gradeSpan}</td>\
-            </tr>\
-            {{/if}}\
-            {{if admissionType}}\
-            <tr>\
-                <td>Admission:</td>\
-                <td>${admissionType}</td>\
-            </tr>\
-            {{/if}}\
-            {{if address}}\
-            <tr>\
-                <td>Address:</td>\
-                <td><address class="slipstream-address">${address}</address></td>\
-            </tr>\
-            {{/if}}\
-            {{if phone}}\
-            <tr>\
-                <td>Phone:</td>\
-                <td>${phone}</td>\
-            </tr>\
-            {{/if}}\
-            {{if principal}}\
-            <tr>\
-                <td>Principal:</td>\
-                <td>${principal}</td>\
-            </tr>\
-            {{/if}}\
-            {{if website}}\
-            <tr>\
-                <td>Website:</td>\
-                <td><a href="${website}" target="_blank">${website}<span class="slipstream-linkref"></span></a></td>\
-            </tr>\
-            {{/if}}\
-            {{if totalTeachers}}\
-            <tr>\
-                <td>Teachers:</td>\
-                <td>${totalTeachers}&nbsp;<span class="slipstream-units">Full Time</span></td>\
-            </tr>\
-            {{/if}}\
-            {{if totalStudents}}\
-            <tr>\
-                <td>Students:</td>\
-                <td>${totalStudents}</td>\
-            </tr>\
-            {{/if}}\
-            {{if studentTeacherRatio}}\
-            <tr>\
-                <td>Ratio:</td>\
-                <td>${studentTeacherRatio}&nbsp;<span class="slipstream-units">Students / Teacher</span></td>\
-            </tr>\
-            {{/if}}\
-            {{if maleStudentsPercentage && femaleStudentsPercentage }}\
-            <tr>\
-                <td>Gender:</td>\
-                <td>${maleStudentsPercentage}%&nbsp;<span class="slipstream-units">Male</span>\
-                    <br>${femaleStudentsPercentage}%&nbsp;<span class="slipstream-units">Female</span></td>\
-            </tr>\
-            {{/if}}\
-            {{if freeLunch && reducedLunch }}\
-            <tr>\
-                <td>Lunch:</td>\
-                <td>${freeLunch}%&nbsp;<span class="slipstream-units">Free</span>\
-                    <br>${reducedLunch}%&nbsp;<span class="slipstream-units">Reduced</span></td>\
-            </tr>\
-            {{/if}}\
-            {{if expenditure}}\
-            <tr>\
-                <td>Expenditure:</td>\
-                <td>${expenditure}&nbsp;<span class="slipstream-units">Per Student</span></td>\
-            </tr>\
-            {{/if}}\
-            {{if titleI}}\
-            <tr>\
-                <td>Title I School:</td>\
-                <td>${titleI}</td>\
-            </tr>\
-            {{/if}}\
-            {{if Id}}\
-            <tr>\
-                <td>NCES ID:</td>\
-                <td>${Id}</td>\
-            </tr>\
-            {{/if}}\
-        </tbody>\
-    </table>\
-</div>\
-<\/script>';
 
 
 var noPhotosImage = "https://static1.squarespace.com/static/5ee8fa93cb7b992c64652a00/t/5f34460edc16f914b375cb7a/1597261326826/no-photos-available-min.jpg";
@@ -934,27 +791,27 @@ function slipstreamGetListingsDetails()
                 else                    
                     $('.pl_property-listing-agent-name').append('Agent Name Unavailable');
                 
-//â€œxf_appliancesâ€?:[â€œDishwasherâ€?,â€œElectric Ovenâ€?,â€œElectric Rangeâ€?,â€œMicrowaveâ€?],
-//â€œxf_associationamenitiesâ€?:[â€œClubhouseâ€?,â€œFitness Centerâ€?,â€œPoolâ€?],
-//â€œxf_associationfeeâ€?:214,
-//â€œxf_associationfeefrequencyâ€?:â€œMonthlyâ€?,
-//â€œxf_bathroomsfullâ€?:1,
-//â€œxf_bathroomshalfâ€?:0,
-//â€œxf_bathroomstotalintegerâ€?:1,
-//â€œxf_bedroomstotalâ€?:1,
-//â€œxf_constructionmaterialsâ€?:[â€œBrick Veneerâ€?,â€œOtherâ€?,â€œVinyl Sidingâ€?],
-//â€œxf_coolingâ€?:[â€œElectricâ€?],
-//â€œxf_daysonmarketâ€?:1
-//â€œxf_fireplacefeaturesâ€?:[â€œNoneâ€?],
-//â€œxf_heatingâ€?:[â€œElectricâ€?]
-//â€œxf_interiorfeaturesâ€?:[â€œCeiling Fan(s)â€œ,â€?Granite Countersâ€?,â€œSolid Surface Countersâ€?],
-//â€œxf_laundryfeaturesâ€?:[â€œLaundry Closetâ€?]
-//â€œxf_levelsâ€?:[â€œOneâ€?]
-//â€œxf_roofâ€?:[â€œCompositionâ€?,â€œShingleâ€?],
-//â€œxf_roomstotalâ€?:4,
-//â€œxf_sewerâ€?:[â€œConnectedâ€?]
-//â€œxf_taxannualamountâ€?:958
-//â€œxf_utilitiesâ€?:[â€œCable Availableâ€?,â€œSewer Connectedâ€?]
+//“xf_appliances”:[“Dishwasher”,“Electric Oven”,“Electric Range”,“Microwave”],
+//“xf_associationamenities”:[“Clubhouse”,“Fitness Center”,“Pool”],
+//“xf_associationfee”:214,
+//“xf_associationfeefrequency”:“Monthly”,
+//“xf_bathroomsfull”:1,
+//“xf_bathroomshalf”:0,
+//“xf_bathroomstotalinteger”:1,
+//“xf_bedroomstotal”:1,
+//“xf_constructionmaterials”:[“Brick Veneer”,“Other”,“Vinyl Siding”],
+//“xf_cooling”:[“Electric”],
+//“xf_daysonmarket”:1
+//“xf_fireplacefeatures”:[“None”],
+//“xf_heating”:[“Electric”]
+//“xf_interiorfeatures”:[“Ceiling Fan(s)“,”Granite Counters”,“Solid Surface Counters”],
+//“xf_laundryfeatures”:[“Laundry Closet”]
+//“xf_levels”:[“One”]
+//“xf_roof”:[“Composition”,“Shingle”],
+//“xf_roomstotal”:4,
+//“xf_sewer”:[“Connected”]
+//“xf_taxannualamount”:958
+//“xf_utilities”:[“Cable Available”,“Sewer Connected”]
                
             }
             
