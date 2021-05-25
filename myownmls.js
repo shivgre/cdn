@@ -22,12 +22,6 @@ $('<script>')
     .appendTo('head');
 
 
-$('<link>')
-    .attr('type', 'text/css')
-    .attr('rel', 'stylesheet')
-    .attr('href', 'https://cdn.jsdelivr.net/gh/shivgre/cdn@latest/myownmls.css')
-    .appendTo('head');
-
 
 $('<script>')
     .attr('type', 'text/x-jQuery-tmpl')
