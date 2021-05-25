@@ -25,7 +25,7 @@ $('<script>')
 $('<link>')
     .attr('type', 'text/css')
     .attr('rel', 'stylesheet')
-    .attr('href', 'http://localhost/squarespacerealbama-local/embed-listings/myownmls.css')
+    .attr('href', 'https://cdn.jsdelivr.net/gh/shivgre/cdn@latest/myownmls.css')
     .appendTo('head');
 
 
