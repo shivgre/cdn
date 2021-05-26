@@ -1,5 +1,5 @@
 let settings = {        
-    "url": "http://localhost/squarespacerealbama-local/embed-listings/slipstream-get-js.php?key=MOMLS-jsXPT$879",
+    "url": "https://rapattoni.myownmls.com/slipstream-get-js.php?key=MOMLS-jsXPT$879",
     "method": "GET",
     "timeout": 0,
     "async": true,
